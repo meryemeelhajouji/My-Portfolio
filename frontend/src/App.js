@@ -1,6 +1,9 @@
 import React from "react";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 
 import {
   BrowserRouter as Router,
@@ -19,8 +22,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer />
+
     </Router>
   );
 }
