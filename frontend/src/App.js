@@ -1,5 +1,5 @@
 import React from "react";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 
 import {
@@ -18,7 +18,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
