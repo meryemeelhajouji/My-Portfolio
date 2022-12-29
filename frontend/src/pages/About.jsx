@@ -1,16 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import Particle from "../Particle";
 import laptopImg from "../Assets/about.png";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 import Techstack from "../components/Techstack";
 
-
 function About() {
   return (
     <Container fluid className="about-section">
-      {/* <Particle /> */}
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -35,11 +32,12 @@ function About() {
                     <br />I am a junior developer.
                     <br />
                     <br />
-                    My information !
+                    My information :
                   </p>
                   <ul>
                     <li className="about-activity">
-                      <ImPointRight />meryemelhajouji@gmail.com
+                      <ImPointRight />
+                      meryemelhajouji@gmail.com
                     </li>
                     <li className="about-activity">
                       <ImPointRight /> https://github.com/meryemeelhajouji
@@ -66,11 +64,9 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading text-center">
-          Professional <strong className="purple">Skillset </strong>
+          Professional <strong className="purple">skills </strong>
         </h1>
         <Techstack />
-
-      
       </Container>
     </Container>
   );
