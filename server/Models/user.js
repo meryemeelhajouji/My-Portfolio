@@ -28,8 +28,7 @@ status:
 token:
     {
         type:String
-    },
-    roleid:{type: mongoose.Schema.Types.ObjectId, ref: 'role'}
+    }
 
 
   
