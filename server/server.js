@@ -3,11 +3,19 @@ const mongoos = require('./Config/config')
 const express = require('express')
 const cors = require('cors');
 const app = express()
-app.use(cors());
+// app.use(cors());
+app.use(
+    cors({
+      origin: 'http://localhost:3000',
+      credentials: true,
+    })
+  );
 app.use(express.json())
 
 //router
 const routerAuth = require('./Routes/authRoute')
+const routerProject = require('./Routes/projectRoute')
+
 
 
 // //Middleware
@@ -16,6 +24,8 @@ const routerAuth = require('./Routes/authRoute')
 
 //router
 app.use('/api/auth',routerAuth)
+app.use('/api/Project',routerProject)
+
 
 
 

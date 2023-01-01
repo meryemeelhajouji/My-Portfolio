@@ -3,7 +3,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const local_storage = require("local-storage");
-const nodelailer = require("nodemailer");
 
 // method : post
 // route : api/auth/login
