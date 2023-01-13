@@ -1,13 +1,19 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../Assets/home-main.svg";
+import { UserContext } from "../context/UserContext";
 
 function Home() {
+  const {user,setUser} = useContext(UserContext)
   return (
     <section>
       <Container fluid className="home-section" id="home">
         <Container className="home-content">
           <Row>
+        <div>
+        <p>{user}</p>
+          <button onClick={() => setUser("johan")}>Change User</button>
+        </div>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
@@ -20,7 +26,7 @@ function Home() {
                 I'M
                 <strong className="main-name"> MERYEME ELHAJOUJI</strong>
               </h1>
-
+             
               <div style={{ padding: 50, textAlign: "left" }}></div>
             </Col>
 

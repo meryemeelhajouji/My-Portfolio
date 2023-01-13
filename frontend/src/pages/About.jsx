@@ -1,15 +1,18 @@
-import React from "react";
+import React,{useContext}  from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import laptopImg from "../Assets/about.png";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
 import Techstack from "../components/Techstack";
+import { UserContext } from "../context/UserContext";
 
 function About() {
+  const {user,setUser} = useContext(UserContext)
   return (
     <Container fluid className="about-section">
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
+              <p>{user}</p>
           <Col
             md={7}
             style={{
